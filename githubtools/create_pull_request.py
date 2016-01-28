@@ -13,8 +13,6 @@ Options:
 from docopt import docopt
 from github import Github
 
-# title,head,base,body
-
 def main():
 	arguments = docopt(__doc__)
 	head = arguments['--head']

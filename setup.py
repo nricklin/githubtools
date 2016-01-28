@@ -17,6 +17,8 @@ setup(name='githubtools',
       entry_points={
           'console_scripts': [
               'github-commit-status = githubtools.commit_status:main',
+              'github-create-pull-request = githubtools.create_pull_request:main',
+              'github-merge-pull-request = githubtools.merge_pull_request:main',
               ]
       }
     )
