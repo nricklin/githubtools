@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name='githubtools',
-      version='0.0.3',
+      version='0.0.4',
       author='nricklin',
       author_email='nricklin@digitalglobe.com',
       license='MIT',
