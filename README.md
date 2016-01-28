@@ -15,3 +15,4 @@ Set status on a commit:
 ```bash
 github-commit-status -c <commit-hash> -s <status> -t <github-token> -r <github_repo> --url <URL> --context <context> -d "<description>"
 ```
+
