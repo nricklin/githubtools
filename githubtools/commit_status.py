@@ -17,9 +17,6 @@ Options:
 from docopt import docopt
 from github import Github
 
-#inputs:
-# description, context, target_url, state, 
-
 def main():
 	arguments = docopt(__doc__)
 	status = arguments['--status']
