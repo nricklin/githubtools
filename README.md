@@ -1,5 +1,10 @@
 # githubtools
-some commandline tools for interacting with github
+some commandline tools for interacting with github.
+
+Things you can do:
+- Set commit status
+- Create a pull request
+- Merge a pull request
 
 Install:
 ```bash
