@@ -3,7 +3,7 @@ some commandline tools for interacting with github
 
 Install:
 ```bash
-pip install git+https://github.com/nricklin/githubtools@v0.0.4
+pip install git+https://github.com/nricklin/githubtools@v0.1.0
 ```
 
 Set status on a commit:
