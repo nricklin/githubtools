@@ -10,7 +10,7 @@ Things you can do:
 
 Install:
 ```bash
-pip install git+https://github.com/nricklin/githubtools@v0.2.0
+pip install git+https://github.com/nricklin/githubtools@v0.2.1
 ```
 
 **Set status on a commit:**
