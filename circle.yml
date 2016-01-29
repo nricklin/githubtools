@@ -10,4 +10,4 @@ dependencies:
 test:
   override:
     - python test.py
-    - cp -r test-reports/unit/githubtools/* $CIRCLE_TEST_REPORTS/
+    - cp -r test-reports/githubtools/* $CIRCLE_TEST_REPORTS/
