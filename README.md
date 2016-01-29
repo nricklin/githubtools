@@ -1,4 +1,6 @@
 # githubtools
+[![Circle CI](https://circleci.com/gh/nricklin/githubtools/tree/master.svg?style=svg)](https://circleci.com/gh/nricklin/githubtools/tree/master)
+
 some commandline tools for interacting with github.
 
 Things you can do:
