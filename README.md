@@ -1,6 +1,8 @@
 # githubtools
 [![Circle CI](https://circleci.com/gh/nricklin/githubtools/tree/master.svg?style=svg)](https://circleci.com/gh/nricklin/githubtools/tree/master)
 
+Latest version: 0.2.1
+
 some commandline tools for interacting with github.
 
 Things you can do:
@@ -10,7 +12,7 @@ Things you can do:
 
 Install:
 ```bash
-pip install git+https://github.com/nricklin/githubtools@v0.2.1
+pip install githubtools
 ```
 
 **Set status on a commit:**
