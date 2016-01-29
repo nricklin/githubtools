@@ -5,7 +5,7 @@ setup(name='githubtools',
       author='nricklin',
       author_email='nricklin@digitalglobe.com',
       license='MIT',
-      description='Some github tools',
+      description='Some simple commandline tools for interacting with github: status, merge, pull, etc.',
       platforms="Posix; MacOS X; Windows",
       install_requires=[
           "PyGithub==1.26.0",
