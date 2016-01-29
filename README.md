@@ -17,8 +17,17 @@ github-commit-status -c <commit-hash> -s <status> -t <github-token> -r <github_r
 ```
 
 **Create a pull request:**
-```bash
-github-create-pull-request -h <head> -b <base> -t <token> -r <repo> [-d "<description>" --title <title>]
+```
+Usage:
+    github-create-pull-request -h <head> -b <base> -t <token> -r <repo> [-d "<description>" --title <title>]
+
+Options:
+    -h <head>, --head <head>  Head: the branch you're pulling from.
+    -b <base>, --base <base>  Base: the branch you're pulling to.
+    -t <token>, --token <token>  github access token
+    -r <repository>, --repo <repository> github repository
+    -d <description> --description <description> The pull request description.
+    --title <title>  The pull request title.
 ```
 
 **Merge a pull request:**
