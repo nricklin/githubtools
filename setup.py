@@ -12,12 +12,12 @@ setup(name='githubtools',
           "docopt==0.6.2"
       ],
       packages=find_packages(),
-      py_modules=['githubtools.status'],
+      py_modules=['githubtools.commit_status','githubtools.commit_status','githubtools.merge_pull_request'],
       include_package_data=True,
       entry_points={
           'console_scripts': [
               'github-commit-status = githubtools.commit_status:main',
-              'github-create-pull-request = githubtools.create_pull_request:main',
+              'github-create-pull-request = githubtools.commit_status:main',
               'github-merge-pull-request = githubtools.merge_pull_request:main',
               ]
       }

@@ -1,3 +1,4 @@
 bumpversion==0.5.3
 PyGithub==1.26.0
 docopt==0.6.2
+xmlrunner==1.7.7

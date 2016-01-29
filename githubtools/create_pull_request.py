@@ -13,8 +13,8 @@ Options:
 from docopt import docopt
 from github import Github
 
-def main():
-	arguments = docopt(__doc__)
+def main(argv=None):
+	arguments = docopt(__doc__, argv=argv)
 	head = arguments['--head']
 	base = arguments['--base']
 	token = arguments['--token']

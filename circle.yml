@@ -1,0 +1,13 @@
+machine:
+  python:
+    version: 2.7.6
+
+dependencies:
+  pre:
+    - pip install -U pip setuptools virtualenv
+    - pip install -r requirements.txt
+
+test:
+  override:
+    - python test.py
+    - cp -r test-reports/githubtools/* $CIRCLE_TEST_REPORTS/
