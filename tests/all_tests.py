@@ -3,7 +3,7 @@ import unittest
 import githubtools.commit_status
 import githubtools.create_pull_request
 import githubtools.merge_pull_request
-
+import vcr
 from docopt import DocoptExit
 
 
@@ -13,7 +13,6 @@ class GithubtoolsTests(unittest.TestCase):
         try:
             githubtools.commit_status.main()
         except DocoptExit as e:
-            print str(e)
             self.assertTrue(str(e).startswith("Usage:"))
         else:
             self.assertTrue(False)
@@ -22,7 +21,6 @@ class GithubtoolsTests(unittest.TestCase):
         try:
             githubtools.create_pull_request.main()
         except DocoptExit as e:
-            print str(e)
             self.assertTrue(str(e).startswith("Usage:"))
         else:
             self.assertTrue(False)
@@ -31,10 +29,23 @@ class GithubtoolsTests(unittest.TestCase):
         try:
             githubtools.merge_pull_request.main()
         except DocoptExit as e:
-            print str(e)
             self.assertTrue(str(e).startswith("Usage:"))
         else:
             self.assertTrue(False)
+
+    @vcr.use_cassette()
+    def test_create_commit_status(self):
+        args = "-t faketoken -r nricklin/githubtools --url https://yahoo.com --context context56 -c d3c3dfe -d description -s success"
+        s = githubtools.commit_status.main(args)
+        self.assertEquals(s.state,'success')
+        self.assertEquals(s.target_url,'https://yahoo.com')
+        self.assertEquals(s.description,'description')
+
+        args = "-u abc -p 123 -r nricklin/githubtools --url https://google.com --context context56 -c d3c3dfe -d description2 -s failure"
+        s = githubtools.commit_status.main(args)
+        self.assertEquals(s.state,'failure')
+        self.assertEquals(s.target_url,'https://google.com')
+        self.assertEquals(s.description,'description2')
 
 def get_suite():
     return unittest.TestLoader().loadTestsFromTestCase(GithubtoolsTests)
