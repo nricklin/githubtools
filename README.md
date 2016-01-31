@@ -1,5 +1,5 @@
 # githubtools
-[![Circle CI](https://circleci.com/gh/nricklin/githubtools/tree/master.svg?style=svg)](https://circleci.com/gh/nricklin/githubtools/tree/master)
+[![Circle CI](https://circleci.com/gh/nricklin/githubtools/tree/master.svg?style=svg)](https://circleci.com/gh/nricklin/githubtools/tree/master) [![PyPI version](https://badge.fury.io/py/githubtools.svg)](https://badge.fury.io/py/githubtools)
 
 Latest version: 0.2.3
 
