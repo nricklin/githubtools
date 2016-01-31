@@ -1,0 +1,42 @@
+interactions:
+- request:
+    body: 'null'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      Content-Length: ['4']
+      User-Agent: [PyGithub/Python]
+    method: GET
+    uri: https://api.github.com/repos/nricklin/githubtools/pulls?state=open
+  response:
+    body: {string: !!python/unicode '[]'}
+    headers:
+      access-control-allow-credentials: ['true']
+      access-control-allow-origin: ['*']
+      access-control-expose-headers: ['ETag, Link, X-GitHub-OTP, X-RateLimit-Limit,
+          X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes,
+          X-Poll-Interval']
+      cache-control: ['private, max-age=60, s-maxage=60']
+      content-length: ['2']
+      content-security-policy: [default-src 'none']
+      content-type: [application/json; charset=utf-8]
+      date: ['Sun, 31 Jan 2016 15:52:19 GMT']
+      etag: ['"e2afea9da59fd8a3bc4215ada1d047e9"']
+      server: [GitHub.com]
+      status: [200 OK]
+      strict-transport-security: [max-age=31536000; includeSubdomains; preload]
+      vary: ['Accept, Authorization, Cookie, X-GitHub-OTP', Accept-Encoding]
+      x-accepted-oauth-scopes: ['']
+      x-content-type-options: [nosniff]
+      x-frame-options: [deny]
+      x-github-media-type: [github.v3]
+      x-github-request-id: ['18094E54:14F4A:46B5396:56AE2DB3']
+      x-oauth-scopes: [repo]
+      x-ratelimit-limit: ['5000']
+      x-ratelimit-remaining: ['4874']
+      x-ratelimit-reset: ['1454255634']
+      x-served-by: [bd82876e9bf04990f289ba22f246ee9b]
+      x-xss-protection: [1; mode=block]
+    status: {code: 200, message: OK}
+version: 1
