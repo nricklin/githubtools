@@ -31,7 +31,8 @@ def main(argv=None):
 
 	g = Github(token)
 	r = g.get_repo(repo)
-	r.create_pull(head=head, base=base, title=title, body=description)
+	p = r.create_pull(head=head, base=base, title=title, body=description)
+	return p
 
 if __name__ == "__main__":
     main()

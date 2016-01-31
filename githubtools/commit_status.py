@@ -36,7 +36,9 @@ def main(argv=None):
 		g = Github(user,password)
 	r = g.get_repo(repo)
 	c = r.get_commit(commit)
-	c.create_status(status, target_url=url, description=description, context=context)
+	s = c.create_status(status, target_url=url, description=description, context=context)
+
+	return s
 
 if __name__ == "__main__":
     main()

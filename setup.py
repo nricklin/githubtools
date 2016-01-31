@@ -8,7 +8,7 @@ setup(name='githubtools',
       description='Some simple commandline tools for interacting with github: status, merge, pull, etc.',
       platforms="Posix; MacOS X; Windows",
       install_requires=[
-          "PyGithub==1.26.0",
+          "PyGithub-requests==1.26.0",
           "docopt==0.6.2"
       ],
       packages=find_packages(),

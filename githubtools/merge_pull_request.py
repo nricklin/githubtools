@@ -27,10 +27,22 @@ def main(argv=None):
 		p = r.get_pull(int(number))
 		print "Merging pull request %s (%s into %s)." % (number, p.head.label, p.base.label)
 		p.merge()
+		return r.get_pull(int(number))
 	elif head and base:
-		# just merge head into base
-		print "Merging %s into %s." % (head, base)
-		r.merge(base,head)
+		# Find the pull request then merge it
+		openpulls = r.get_pulls(state='open')
+		p = None
+		for pull in openpulls:
+			if pull.head.label.split(':')[1] == head and pull.base.label.split(':')[1] == base:
+				p = pull
+				break
+
+		if not p:
+			raise Exception('No pull request found matching head: %s and base: %s.' % (head,base))
+
+		print "Merging pull request %s (%s into %s)." % (p.number, p.head.label, p.base.label)
+		p.merge()
+		return r.get_pull(int(p.number))
 
 if __name__ == "__main__":
     main()
