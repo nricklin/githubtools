@@ -1,7 +1,7 @@
 # githubtools
 [![Circle CI](https://circleci.com/gh/nricklin/githubtools/tree/master.svg?style=svg)](https://circleci.com/gh/nricklin/githubtools/tree/master)
 
-Latest version: 0.2.1
+Latest version: 0.2.2
 
 some commandline tools for interacting with github.
 
