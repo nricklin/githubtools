@@ -12,7 +12,7 @@ Options:
 from docopt import docopt
 from github import Github
 
-def main(argv=None):
+def main(argv=None, test=False):
 	arguments = docopt(__doc__, argv=argv)
 	head = arguments['--head']
 	base = arguments['--base']
@@ -27,7 +27,8 @@ def main(argv=None):
 		p = r.get_pull(int(number))
 		print "Merging pull request %s (%s into %s)." % (number, p.head.label, p.base.label)
 		p.merge()
-		return r.get_pull(int(number))
+		if test:
+			return r.get_pull(int(number))
 	elif head and base:
 		# Find the pull request then merge it
 		openpulls = r.get_pulls(state='open')
@@ -42,7 +43,8 @@ def main(argv=None):
 
 		print "Merging pull request %s (%s into %s)." % (p.number, p.head.label, p.base.label)
 		p.merge()
-		return r.get_pull(int(p.number))
+		if test:
+			return r.get_pull(int(p.number))
 
 if __name__ == "__main__":
     main()
