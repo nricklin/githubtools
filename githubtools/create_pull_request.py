@@ -13,7 +13,7 @@ Options:
 from docopt import docopt
 from github import Github
 
-def main(argv=None):
+def main(argv=None, test=False):
 	arguments = docopt(__doc__, argv=argv)
 	head = arguments['--head']
 	base = arguments['--base']
@@ -32,7 +32,9 @@ def main(argv=None):
 	g = Github(token)
 	r = g.get_repo(repo)
 	p = r.create_pull(head=head, base=base, title=title, body=description)
-	return p
+
+	if test:
+		return p
 
 if __name__ == "__main__":
     main()

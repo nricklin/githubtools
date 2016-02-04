@@ -17,7 +17,7 @@ Options:
 from docopt import docopt
 from github import Github
 
-def main(argv=None):
+def main(argv=None, test=False):
 	arguments = docopt(__doc__, argv=argv)
 	status = arguments['--status']
 	commit = arguments['--commit-hash']
@@ -38,7 +38,8 @@ def main(argv=None):
 	c = r.get_commit(commit)
 	s = c.create_status(status, target_url=url, description=description, context=context)
 
-	return s
+	if test:
+		return s
 
 if __name__ == "__main__":
     main()
