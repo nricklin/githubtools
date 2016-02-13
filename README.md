@@ -61,7 +61,7 @@ Options:
     -p <pull-number> --pull-number <pull-number> The pull request ID number.
 ```
 
-**Merge
+**Merge:**
 ```
 Usage:
     github-merge-pull-request -h <head> -b <base> -t <token> -r <repo>
