@@ -15,6 +15,7 @@ setup(name='githubtools',
 			- Set commit status
 			- Create a pull request
 			- Merge a pull request
+			- Merge
 
 			Set Status on a commit:
 
