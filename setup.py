@@ -60,9 +60,9 @@ setup(name='githubtools',
 					-p <pull-number> --pull-number <pull-number> The pull request ID number.
 
 			Merge
-			
+
 				Usage:
-					github-merge-pull-request -h <head> -b <base> -t <token> -r <repo>
+					github-merge -h <head> -b <base> -t <token> -r <repo>
 
 				Options:
 					-h <head>, --head <head>  Head: the branch you're pulling from.
