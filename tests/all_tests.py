@@ -3,6 +3,7 @@ import unittest
 import githubtools.commit_status
 import githubtools.create_pull_request
 import githubtools.merge_pull_request
+import githubtools.merge
 import vcr
 from docopt import DocoptExit
 
@@ -28,6 +29,14 @@ class GithubtoolsTests(unittest.TestCase):
     def test_merge_pull_request_no_args(self):
         try:
             githubtools.merge_pull_request.main()
+        except DocoptExit as e:
+            self.assertTrue(str(e).startswith("Usage:"))
+        else:
+            self.assertTrue(False)
+
+    def test_merge_no_args(self):
+        try:
+            githubtools.merge.main()
         except DocoptExit as e:
             self.assertTrue(str(e).startswith("Usage:"))
         else:
@@ -93,10 +102,13 @@ class GithubtoolsTests(unittest.TestCase):
             self.assertEquals(str(e),"No pull request found matching head: dummy_branch and base: master.")
         else:
             self.assertTrue(False)
-        
-        
 
-
+    @vcr.use_cassette(filter_headers=['authorization'])
+    def test_merge(self):
+        args = "-t faketoken -r nricklin/githubtools -h ac36ee8c403a90cba8e2981fe5b93f273785e604 -b test1"
+        c = githubtools.merge.main(args, test=True)
+        self.assertEquals(c.parents[1].sha,'ac36ee8c403a90cba8e2981fe5b93f273785e604')
+        
 def get_suite():
     return unittest.TestLoader().loadTestsFromTestCase(GithubtoolsTests)
 

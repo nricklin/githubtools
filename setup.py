@@ -73,6 +73,7 @@ setup(name='githubtools',
               'github-commit-status = githubtools.commit_status:main',
               'github-create-pull-request = githubtools.commit_status:main',
               'github-merge-pull-request = githubtools.merge_pull_request:main',
+              'github-merge = githubtools.merge:main'
               ]
       }
     )
