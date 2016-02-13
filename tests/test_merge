@@ -1,0 +1,45 @@
+interactions:
+- request:
+    body: '{"head": "ac36ee8c403a90cba8e2981fe5b93f273785e604", "base": "test1"}'
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      Content-Length: ['69']
+      Content-Type: [application/json]
+      User-Agent: [PyGithub/Python]
+    method: POST
+    uri: https://api.github.com/repos/nricklin/githubtools/merges
+  response:
+    body: {string: !!python/unicode '{"sha":"ba5d05685b33ac73a7cc7a4c4d1f736eeece0b82","commit":{"author":{"name":"nricklin","email":"nate@rickl.in","date":"2016-02-13T16:19:29Z"},"committer":{"name":"nricklin","email":"nate@rickl.in","date":"2016-02-13T16:19:29Z"},"message":"Merge
+        ac36ee8c403a90cba8e2981fe5b93f273785e604 into test1","tree":{"sha":"5eb9b77124da5f3e8c0661be18edff633f15d84a","url":"https://api.github.com/repos/nricklin/githubtools/git/trees/5eb9b77124da5f3e8c0661be18edff633f15d84a"},"url":"https://api.github.com/repos/nricklin/githubtools/git/commits/ba5d05685b33ac73a7cc7a4c4d1f736eeece0b82","comment_count":0},"url":"https://api.github.com/repos/nricklin/githubtools/commits/ba5d05685b33ac73a7cc7a4c4d1f736eeece0b82","html_url":"https://github.com/nricklin/githubtools/commit/ba5d05685b33ac73a7cc7a4c4d1f736eeece0b82","comments_url":"https://api.github.com/repos/nricklin/githubtools/commits/ba5d05685b33ac73a7cc7a4c4d1f736eeece0b82/comments","author":{"login":"nricklin","id":5749532,"avatar_url":"https://avatars.githubusercontent.com/u/5749532?v=3","gravatar_id":"","url":"https://api.github.com/users/nricklin","html_url":"https://github.com/nricklin","followers_url":"https://api.github.com/users/nricklin/followers","following_url":"https://api.github.com/users/nricklin/following{/other_user}","gists_url":"https://api.github.com/users/nricklin/gists{/gist_id}","starred_url":"https://api.github.com/users/nricklin/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/nricklin/subscriptions","organizations_url":"https://api.github.com/users/nricklin/orgs","repos_url":"https://api.github.com/users/nricklin/repos","events_url":"https://api.github.com/users/nricklin/events{/privacy}","received_events_url":"https://api.github.com/users/nricklin/received_events","type":"User","site_admin":false},"committer":{"login":"nricklin","id":5749532,"avatar_url":"https://avatars.githubusercontent.com/u/5749532?v=3","gravatar_id":"","url":"https://api.github.com/users/nricklin","html_url":"https://github.com/nricklin","followers_url":"https://api.github.com/users/nricklin/followers","following_url":"https://api.github.com/users/nricklin/following{/other_user}","gists_url":"https://api.github.com/users/nricklin/gists{/gist_id}","starred_url":"https://api.github.com/users/nricklin/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/nricklin/subscriptions","organizations_url":"https://api.github.com/users/nricklin/orgs","repos_url":"https://api.github.com/users/nricklin/repos","events_url":"https://api.github.com/users/nricklin/events{/privacy}","received_events_url":"https://api.github.com/users/nricklin/received_events","type":"User","site_admin":false},"parents":[{"sha":"1e58bb940d8fb2feaffa8403784b8b9ffad280ae","url":"https://api.github.com/repos/nricklin/githubtools/commits/1e58bb940d8fb2feaffa8403784b8b9ffad280ae","html_url":"https://github.com/nricklin/githubtools/commit/1e58bb940d8fb2feaffa8403784b8b9ffad280ae"},{"sha":"ac36ee8c403a90cba8e2981fe5b93f273785e604","url":"https://api.github.com/repos/nricklin/githubtools/commits/ac36ee8c403a90cba8e2981fe5b93f273785e604","html_url":"https://github.com/nricklin/githubtools/commit/ac36ee8c403a90cba8e2981fe5b93f273785e604"}]}'}
+    headers:
+      access-control-allow-credentials: ['true']
+      access-control-allow-origin: ['*']
+      access-control-expose-headers: ['ETag, Link, X-GitHub-OTP, X-RateLimit-Limit,
+          X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes,
+          X-Poll-Interval']
+      cache-control: ['private, max-age=60, s-maxage=60']
+      content-length: ['3226']
+      content-security-policy: [default-src 'none']
+      content-type: [application/json; charset=utf-8]
+      date: ['Sat, 13 Feb 2016 16:19:29 GMT']
+      etag: ['"56261dd829baae9c2aa7a00fd734c3c8"']
+      location: ['https://api.github.com/repos/nricklin/githubtools/commits/ba5d05685b33ac73a7cc7a4c4d1f736eeece0b82']
+      server: [GitHub.com]
+      status: [201 Created]
+      strict-transport-security: [max-age=31536000; includeSubdomains; preload]
+      vary: ['Accept, Authorization, Cookie, X-GitHub-OTP', Accept-Encoding]
+      x-accepted-oauth-scopes: ['']
+      x-content-type-options: [nosniff]
+      x-frame-options: [deny]
+      x-github-media-type: [github.v3]
+      x-github-request-id: ['18094E54:C8D3:115025AE:56BF5791']
+      x-oauth-scopes: [repo]
+      x-ratelimit-limit: ['5000']
+      x-ratelimit-remaining: ['4987']
+      x-ratelimit-reset: ['1455383166']
+      x-served-by: [cee4c0729c8e9147e7abcb45b9d69689]
+      x-xss-protection: [1; mode=block]
+    status: {code: 201, message: Created}
+version: 1

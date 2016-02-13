@@ -9,6 +9,7 @@ Things you can do:
 - Set commit status
 - Create a pull request
 - Merge a pull request
+- Merge
 
 Install:
 ```bash
@@ -58,4 +59,16 @@ Options:
     -t <token>, --token <token>  github access token
     -r <repository>, --repo <repository> github repository
     -p <pull-number> --pull-number <pull-number> The pull request ID number.
+```
+
+**Merge:**
+```
+Usage:
+    github-merge -h <head> -b <base> -t <token> -r <repo>
+
+Options:
+    -h <head>, --head <head>  Head: the branch you're pulling from.
+    -b <base>, --base <base>  Base: the branch you're pulling to.
+    -t <token>, --token <token>  github access token
+    -r <repository>, --repo <repository> github repository
 ```
