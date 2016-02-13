@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 import textwrap
 
 setup(name='githubtools',
-      version='0.3.0',
+      version='0.3.1',
       author='nricklin',
       author_email='nricklin@digitalglobe.com',
       license='MIT',
