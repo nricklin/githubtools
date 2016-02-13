@@ -59,6 +59,17 @@ setup(name='githubtools',
 					-r <repository>, --repo <repository> github repository
 					-p <pull-number> --pull-number <pull-number> The pull request ID number.
 
+			Merge
+			
+				Usage:
+					github-merge-pull-request -h <head> -b <base> -t <token> -r <repo>
+
+				Options:
+					-h <head>, --head <head>  Head: the branch you're pulling from.
+					-b <base>, --base <base>  Base: the branch you're pulling to.
+					-t <token>, --token <token>  github access token
+					-r <repository>, --repo <repository> github repository
+
 			See https://github.com/nricklin/githubtools"""),
       platforms="Posix; MacOS X; Windows",
       install_requires=[
